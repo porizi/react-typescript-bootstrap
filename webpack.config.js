@@ -18,10 +18,6 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 loader: 'ts-loader'
-            },
-            {
-                test: /\.jsx$/,
-                loader: 'jsx-loader?insertPragma=React.DOM&harmony'
             }
         ]
     }

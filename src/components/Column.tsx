@@ -5,6 +5,7 @@ interface Properties {
     height: number
     width: number
     color: string
+    isLoading: boolean
 }
 
 interface Callbacks {
@@ -12,10 +13,24 @@ interface Callbacks {
 
 interface Props extends React.Props<any>, Properties, Callbacks {}
 
-interface State extends React.Props<any> {
+interface State {
+    isSelected: Boolean
 }
 
 export class Column extends React.Component<Props, State> {
+
+    constructor(props: Props) {
+        super(props);
+        this.state = {
+            isSelected: false
+        }
+    }
+
+    handleColumnClick(e : React.SyntheticEvent) {
+        this.setState({
+            isSelected: !this.state.isSelected
+        });
+    }
 
     render() {
 
@@ -26,7 +41,11 @@ export class Column extends React.Component<Props, State> {
             backgroundColor: this.props.color
         };
 
-        return <div className="column" style={columnStyle}></div>
+        return <div
+            className={"column " + (this.state.isSelected ? 'column-selected': '') }
+            style={columnStyle}
+            onClick={e => this.handleColumnClick(e)}>
+        </div>
     }
 }
 

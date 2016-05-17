@@ -4,6 +4,7 @@ import {Series} from './Series';
 
 interface Properties {
     graph: IGraph
+    isLoading: boolean
 }
 
 interface Callbacks {
@@ -11,17 +12,32 @@ interface Callbacks {
 
 interface Props extends React.Props<any>, Properties, Callbacks {}
 
-interface State extends React.Props<any> {
+interface State {
 }
 
 export class Graph extends React.Component<Props, State> {
 
+    defaultProps = {
+        isLoading: false
+    };
+
+    componentWillReceiveProps(nextProps: Props) {
+    }
+
+    shouldComponentUpdate(nextProps: Props, nextState: State): boolean {
+        return true;
+    }
+
     render() {
         
-        var series = this.props.graph.series.map( series =>
-            <Series series={series} />
+        var series = this.props.graph.series.map( (series, index) =>
+            <Series key={index} series={series} {...this.props} />
         );
+
+        var graphStyle = {
+            opacity: this.props.isLoading ? 0.5 : 1.0
+        };
         
-        return <div className="graph">{series}</div>
+        return <div className="graph" style={graphStyle}>{series}</div>
     }
 }

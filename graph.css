@@ -29,4 +29,9 @@
     box-sizing: border-box;
     bottom: 0;
     transition: height 200ms linear;
+    cursor: pointer;
+}
+
+.column.column-selected {
+    border: 1px solid red;
 }
