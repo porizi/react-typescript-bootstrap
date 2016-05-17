@@ -27,7 +27,7 @@ function handleRenderGraph() {
             <Graph graph={graph} isLoading={false}/>,
             document.getElementsByClassName('graph-container')[0]
         );
-    }, 500);
+    }, 300);
 
 }
 

@@ -27,9 +27,11 @@ export class Column extends React.Component<Props, State> {
     }
 
     handleColumnClick(e : React.SyntheticEvent) {
-        this.setState({
-            isSelected: !this.state.isSelected
-        });
+        if (!this.props.isLoading) {
+            this.setState({
+                isSelected: !this.state.isSelected
+            });
+        }
     }
 
     render() {
