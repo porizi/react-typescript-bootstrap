@@ -1,0 +1,29 @@
+{
+  "name": "react-typescript-bootstrap",
+  "version": "1.0.0",
+  "description": "Bootstrap project for React.js using Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/porizi/react-typescript-bootstrap.git"
+  },
+  "author": "Avgoustinos Kadis",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/porizi/react-typescript-bootstrap/issues"
+  },
+  "homepage": "https://github.com/porizi/react-typescript-bootstrap#readme",
+  "devDependencies": {
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.3",
+    "webpack": "^1.13.0"
+  },
+  "dependencies": {
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2"
+  }
+}
