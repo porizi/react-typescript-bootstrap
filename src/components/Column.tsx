@@ -21,6 +21,7 @@ export class Column extends React.Component<Props, State> {
 
     constructor(props: Props) {
         super(props);
+        // Here we set the initial state
         this.state = {
             isSelected: false
         }
