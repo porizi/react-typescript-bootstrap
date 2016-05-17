@@ -13,6 +13,7 @@ interface Callbacks {
 
 interface Props extends React.Props<any>, Properties, Callbacks {}
 
+// This is where we define the app state
 interface State {
     isSelected: Boolean
 }
@@ -32,6 +33,10 @@ export class Column extends React.Component<Props, State> {
             this.setState({
                 isSelected: !this.state.isSelected
             });
+        } else {
+            // [1] Get code completion on framework fields & methods
+            // Note: this is just for demo .. you don't need this
+            e.stopPropagation();
         }
     }
 

@@ -23,6 +23,7 @@ export class Series extends React.Component<Props, State> {
         var columnWidth = 100 / this.props.series.data.length;
         var maxY = findMax(this.props.series.data.map(dp => dp.y));
 
+        // [1] Compiler makes sure all the properties are wired correctly
         var columns = this.props.series.data.map( (datapoint, index) =>
             <Column
                 key={index}
