@@ -6,6 +6,7 @@ import {Series} from './Series';
 interface Properties {
     graph: IGraph
     isLoading: boolean
+    newProperty?: number
 }
 
 // Here we specify all of the component callbacks
@@ -19,20 +20,20 @@ interface State {
 
 export class Graph extends React.Component<Props, State> {
 
-    // [1] We use defaultProps field instead of getDefaultProps()
+    // Here we specify the default properties
     defaultProps = {
         isLoading: false
     };
 
     shouldComponentUpdate(nextProps: Props, nextState: State): boolean {
-        // [2] We can get type checking with nextProps and nextState parameters
+        // [1] We can get type checking with nextProps and nextState parameters
         return true;
     }
 
     render() {
         
         var series = this.props.graph.series.map( (series, index) => {
-            // [3] ...this.props gets type checked
+            // [2] ...this.props gets type checked
             return <Series key={index} series={series} {...this.props} />
         });
 
@@ -40,7 +41,7 @@ export class Graph extends React.Component<Props, State> {
             opacity: this.props.isLoading ? 0.5 : 1.0
         };
 
-        // [4] Code completion helps with complicated data
+        // [3] You can quick-view the documentation of showGraphBorder
         if (this.props.graph.settings && this.props.graph.settings.showGraphBorder) {
             // do something to show the border around the graph
         }
