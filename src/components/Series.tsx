@@ -6,7 +6,6 @@ import {findMax} from "../utils";
 interface Properties {
     series: ISeries
     isLoading: boolean
-    newProperty: number
 }
 
 interface Callbacks {

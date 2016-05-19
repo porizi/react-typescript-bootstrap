@@ -6,7 +6,6 @@ import {Series} from './Series';
 interface Properties {
     graph: IGraph
     isLoading: boolean
-    newProperty?: number
 }
 
 // Here we specify all of the component callbacks
