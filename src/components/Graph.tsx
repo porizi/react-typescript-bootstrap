@@ -34,7 +34,7 @@ export class Graph extends React.Component<Props, State> {
     handleClick(series: number) {
         return (column: number) => {
             // [2] We can auto-complete inside strings
-            alert(`Column ${column} of series ${series} was clicked`);
+            alert(`Column ${column} of series ${series}`);
             this.props.onClick(series, column);
         }
     }

@@ -3,32 +3,31 @@ import * as ReactDOM from 'react-dom';
 
 import {Graph} from './components/Graph';
 import {generateRandomSeries} from "./sampleData";
+import {IGraph} from "./models";
 
 ReactDOM.render(
-    <button onClick={handleRenderGraph}>Generate</button>,
+    <button onClick={handleRenderGraph}>
+        Generate
+    </button>,
     document.getElementsByClassName('button-container')[0]
 );
 
-var graph = {series: [generateRandomSeries(50)]};
-
 function handleRenderGraph() {
-
+    var graph = {
+        series: [generateRandomSeries(50)],
+        settings: {
+            showGraphBorder: false,
+            showLoadAnimation: false
+        }
+    };
     ReactDOM.render(
-        <Graph graph={graph} isLoading={true}/>,
+        <Graph graph={graph} isLoading={false}/>,
         document.getElementsByClassName('graph-container')[0]
     );
-
-    setTimeout(function() {
-        graph = {
-            series: [generateRandomSeries(50)]
-        };
-
-        ReactDOM.render(
-            <Graph graph={graph} isLoading={false}/>,
-            document.getElementsByClassName('graph-container')[0]
-        );
-    }, 300);
-
+    // Wait .. isn't this Javascript?
+    // [1] try setting showGraphBorder to 1
+    // [2] try removing the series field
+    // [3] can I see the errors inside the editor?
 }
 
 handleRenderGraph();
