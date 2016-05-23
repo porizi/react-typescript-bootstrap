@@ -5,9 +5,15 @@ export interface IGraph {
 }
 
 interface IGraphSettings {
-    /** If set to true, it will show a border around the graph */
+    /**
+     * If set to true, it will show a border around
+     * the graph
+     */
     showGraphBorder?: boolean
-    /** If set to true, it'll show a loading animation when the data change */
+    /**
+     * If set to true, it'll show a loading animation
+     * when the data change
+     */
     showLoadAnimation?: boolean
 }
 
@@ -18,7 +24,7 @@ export interface ISeries {
 }
 
 export interface IDataPoint {
-    x?: number          // [1] Is it used anywhere? Can I remove it?
-    y: number           // [2] Can I rename this to "value"?
-    color?: string      // [3] Can I see where is this field used?
+    x?: number      // [1] Is it used anywhere? Can I remove it?
+    y: number       // [2] Can I rename this to "value"?
+    color?: string  // [3] Can I see where is this field used?
 }
