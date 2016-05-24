@@ -20,14 +20,17 @@ function handleRenderGraph() {
             showLoadAnimation: false
         }
     };
+
     ReactDOM.render(
-        <Graph graph={graph} isLoading={false}/>,
+        <Graph
+            graph={graph}
+            isLoading={false}
+        />,
         document.getElementsByClassName('graph-container')[0]
     );
     // Wait .. isn't this Javascript?
     // [1] try setting showGraphBorder to 1
     // [2] try removing the series field
-    // [3] can I see the errors inside the editor?
 }
 
 handleRenderGraph();
