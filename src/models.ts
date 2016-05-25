@@ -10,7 +10,8 @@ interface IGraphSettings {
      */
     showGraphBorder?: boolean
     /**
-     * If set to true, it'll show a loading animation when the data change
+     * If set to true, it'll show a loading animation when the
+     * data change
      */
     showLoadAnimation?: boolean
 }

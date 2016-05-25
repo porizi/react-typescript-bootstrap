@@ -27,6 +27,7 @@ export class Graph extends React.Component<Props, State> {
     };
 
     shouldComponentUpdate(nextProps: Props, nextState: State): boolean {
+
         // [2] We can get type checking with nextProps and
         // nextState parameters
         return true;
@@ -48,7 +49,7 @@ export class Graph extends React.Component<Props, State> {
                     key={index}
                     series={series}
                     {...this.props}
-                    onSeriesClick={this.handleClick(index)}
+                    onClick={this.handleClick(index)}
                 />
         });
 
@@ -56,7 +57,7 @@ export class Graph extends React.Component<Props, State> {
             opacity: this.props.isLoading ? 0.5 : 1.0
         };
 
-        // [5] You can quick-view the documentation of showGraphBorder
+        // [5] You can quick-view the doc of showGraphBorder
         if (this.props.graph.settings &&
             this.props.graph.settings.showGraphBorder) {
             // do something to show the border around the graph
