@@ -27,7 +27,6 @@ export class Graph extends React.Component<Props, State> {
     };
 
     shouldComponentUpdate(nextProps: Props, nextState: State): boolean {
-
         // [2] We can get type checking with nextProps and
         // nextState parameters
         return true;

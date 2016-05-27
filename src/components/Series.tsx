@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {ISeries} from "../models";
 import {Column} from './Column';
-import {findMaximum} from "../utils";
+import {findMax} from "../utils";
 
 interface Properties {
     series: ISeries
@@ -23,14 +23,14 @@ export class Series extends React.Component<Props, State> {
         // [1] Can we rename a property from here?
         this.props.onClick(column);
         // [2] Can we get auto-completion within strings?
-        console.log(`Column ${column} was clicked`);
+        console.log(`Column ${this.props.series.color} was clicked`);
     }
 
     render() {
 
         var columnWidth = 100 / this.props.series.data.length;
         // [3] Can we rename a method from here?
-        var maxY = findMaximum(
+        var maxY = findMax(
             this.props.series.data.map(dp => dp.y)
         );
 
