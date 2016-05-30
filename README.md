@@ -33,3 +33,11 @@ React with Typescript:
 * [Working with React and Typescript](http://blog.wolksoftware.com/working-with-react-and-typescript)
 * [Using JSX with TypeScript](http://blog.mgechev.com/2015/07/05/using-jsx-react-with-typescript/)
 * [TypeScript Editor Support](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support)
+
+### Any questions?
+
+If you have any questions or you have some problems getting started with React & Typescript pls feel free to drop me an email at: **avgoustinos [at] porizi.com**
+
+### Do you like developing with React & Typescript?
+
+We build all our front-ends using React + Typescript, therefore if you are interested in working with us (Porizi Technologies - we work remotely), please drop us an email at **jobs [at] porizi.com**
