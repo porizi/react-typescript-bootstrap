@@ -24,7 +24,7 @@ We are using [typings](https://github.com/typings/typings) for installing type d
 
 2. Search for a type definition (eg. react): `typings search react`
 
-3. Install the typing of your choice (remember to prefix it with the source): `typings install dt-react`
+3. Install the typing of your choice (remember to prefix it with the source): `typings install dt-react --save`
 
 ### Other useful articles
 
